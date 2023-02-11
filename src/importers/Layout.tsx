@@ -1,6 +1,10 @@
 import React from 'react'
-import BoxComponent, { BoxComponentProps } from './components/BoxComponent/BoxComponent'
-import FlexComponent, { FlexComponentProps } from './components/FlexComponent/FlexComponent'
+import BoxComponent, { BoxComponentProps } from './components/Box/BoxComponent'
+import FlexComponent, { FlexComponentProps } from './components/Flex/FlexComponent'
+import FlexBoxComponent, { FlexBoxComponentProps } from './components/FlexBox/FlexBoxComponent'
+import ButtonComponent, { ButtonComponentProps } from './components/Button/ButtonComponent'
+import TextComponent, { TextComponentProps } from './components/Text/TextComponent'
+import TitleComponent, { TitleComponentProps } from './components/Title/TitleComponent'
 
 export const Box = (props: BoxComponentProps) => {
   return <BoxComponent {...props} />
@@ -8,4 +12,20 @@ export const Box = (props: BoxComponentProps) => {
 
 export const Flex = (props: FlexComponentProps) => {
   return <FlexComponent {...props} />
+}
+
+export const FlexBox = (props: FlexBoxComponentProps) => {
+  return <FlexBoxComponent {...props} />
+}
+
+export const Button = (props: ButtonComponentProps) => {
+  return <ButtonComponent {...props} />
+}
+
+export const Text = (props: TextComponentProps) => {
+  return <TextComponent {...props} />
+}
+
+export const Title = (props: TitleComponentProps) => {
+  return <TitleComponent {...props} />
 }

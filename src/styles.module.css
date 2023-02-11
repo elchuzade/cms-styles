@@ -1,4 +1,27 @@
 /* add css module styles here (optional) */
+:root {
+  --blue: #2A86EC;
+  --hoverBlue: #2C76BE;
+  --activeBlue: #225E99;
+  --purple: #945EB0;
+  --hoverPurple: #703490;
+  --activePurple: #582374;
+  --green: #26BE52;
+  --hoverGreen: #29843D;
+  --activeGreen: #186028;
+  --red: #F1433A;
+  --hoverRed: #B6211A;
+  --activeRed: #901913;
+  --orange: #EFC323;
+  --hoverOrange: #D0A31C;
+  --activeOrange: #AD891E;
+  --light: #EDEDED;
+  --hoverLight: #BFBFBF;
+  --activeLight: #969696;
+  --dark: #384048;
+  --hoverDark: #2C3239;
+  --activeDark: #232323;
+}
 
 .test {
   border: 2px solid #000;

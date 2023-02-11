@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Flex.styles.css'
-import { BoxComponentProps } from '../BoxComponent/BoxComponent'
+import { BoxComponentProps } from '../Box/BoxComponent'
 
 export interface FlexComponentProps extends BoxComponentProps {
   children: React.ReactNode;
