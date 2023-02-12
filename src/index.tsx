@@ -20,6 +20,13 @@ export const ExampleComponent = ({ text }: Props) => {
           <Button m={8} color='purple' onClick={() => { }}>blah</Button>
           <Button m={8} color='green' onClick={() => { }}>blah</Button>
           <Button m={8} color='orange' onClick={() => { }}>blah</Button>
+          <Button small m={8} color='light' onClick={() => { }}>blah</Button>
+          <Button small m={8} color='dark' onClick={() => { }}>blah</Button>
+          <Button small m={8} color='red' onClick={() => { }}>blah</Button>
+          <Button small m={8} color='blue' onClick={() => { }}>blah</Button>
+          <Button small m={8} color='purple' onClick={() => { }}>blah</Button>
+          <Button small m={8} color='green' onClick={() => { }}>blah</Button>
+          <Button small m={8} color='orange' onClick={() => { }}>blah</Button>
         </FlexBox>
         <FlexBox width={50}>
           <Box m={20}>
@@ -32,6 +39,16 @@ export const ExampleComponent = ({ text }: Props) => {
         <FlexBox width={100}>
           <Form>
             <TextInput
+              small
+              ml={16}
+              mt={16}
+              mb={16}
+              name='test'
+              value={textInput}
+              onChange={e => setTextInput(e.target.value)}
+            />
+            <Button small mt={8} mb={8} type='submit' color='orange' onClick={() => { }}>form button</Button>
+            <TextInput
               ml={16}
               mt={16}
               mb={16}
@@ -40,6 +57,7 @@ export const ExampleComponent = ({ text }: Props) => {
               onChange={e => setTextInput(e.target.value)}
             />
             <Button mt={8} mb={8} type='submit' color='orange' onClick={() => { }}>form button</Button>
+            <Text small>{text}</Text>
           </Form>
         </FlexBox>
       </Flex>

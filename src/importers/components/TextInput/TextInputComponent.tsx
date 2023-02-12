@@ -7,13 +7,15 @@ export interface TextInputComponentProps extends CustomizableComponent {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   disabled?: boolean;
+  small?: boolean;
   type?: 'button' | 'checkbox' | 'color' | 'date' | 'datetime-local' | 'email' | 'file' | 'hidden' | 'image' | 'month' | 'number' | 'password' | 'radio' | 'range' | 'reset' | 'search' | 'submit' | 'tel' | 'text' | 'time' | 'url' | 'week',
 }
 
 const defaultProps = {
   type: 'text',
   placeholder: 'type here...',
-  disabled: false
+  disabled: false,
+  small: false
 }
 
 const TextInputComponent = (props: TextInputComponentProps) => {
@@ -26,7 +28,7 @@ const TextInputComponent = (props: TextInputComponentProps) => {
       placeholder={props.placeholder}
       disabled={props.disabled}
       onChange={props.onChange}
-      className={`${styles.textInput} ${props.className || ''}`}
+      className={`${styles.textInput} ${props.small ? styles['textInput-small'] : ''} ${props.className || ''}`}
       style={{
         marginLeft: props.ml || props.m || '',
         marginRight: props.mr || props.m || '',

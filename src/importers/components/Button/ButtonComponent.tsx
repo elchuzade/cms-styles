@@ -8,6 +8,11 @@ export interface ButtonComponentProps extends CustomizableComponent {
   color?: 'blue' | 'green' | 'orange' | 'red' | 'purple' | 'dark' | 'light';
   width?: number; // width in percentages in case the parent is flex
   alignSelf?: string; // works in case the parent is flex
+  small?: boolean;
+}
+
+const defaultProps = {
+  small: false
 }
 
 const ButtonComponent = (props: ButtonComponentProps) => {
@@ -23,7 +28,7 @@ const ButtonComponent = (props: ButtonComponentProps) => {
       id={props.id || ''}
       type={props.type || 'button'}
       onClick={props.onClick}
-      className={`${styles.button} ${styles[buttonBackground]} ${props.className || ''}`}
+      className={`${styles.button} ${props.small ? styles['button-small'] : ''} ${styles[buttonBackground]} ${props.className || ''}`}
       style={{
         width: props.width ? `${props.width}%` : '',
         alignSelf: props.alignSelf || '',
@@ -40,5 +45,7 @@ const ButtonComponent = (props: ButtonComponentProps) => {
     >{props.children}</button>
   )
 }
+
+ButtonComponent.defaultProps = defaultProps;
 
 export default ButtonComponent
