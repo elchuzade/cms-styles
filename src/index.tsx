@@ -7,8 +7,8 @@ interface Props {
 }
 
 export const ExampleComponent = ({ text }: Props) => {
-  const [textInput, setTextInput] = useState('')
-  const [selectInput, setSelectInput] = useState('')
+  const [textInput, setTextInput] = useState<string>('')
+  const [selectInput, setSelectInput] = useState<string>('')
 
   return (
     <div className={styles.body}>
