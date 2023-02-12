@@ -1,12 +1,14 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import styles from './styles.module.css'
-import { Box, Flex, FlexBox, Button, Text, Title, Form } from './importers/Layout'
+import { Box, Flex, FlexBox, Button, Text, Title, Form, TextInput } from './importers/Layout'
 
 interface Props {
   text: string
 }
 
 export const ExampleComponent = ({ text }: Props) => {
+  const [textInput, setTextInput] = useState('')
+
   return (
     <div className={styles.body}>
       <Flex>
@@ -29,7 +31,15 @@ export const ExampleComponent = ({ text }: Props) => {
         </FlexBox>
         <FlexBox width={100}>
           <Form>
-            <Button m={8} type='submit' color='orange' onClick={() => { }}>form button</Button>
+            <TextInput
+              ml={16}
+              mt={16}
+              mb={16}
+              name='test'
+              value={textInput}
+              onChange={e => setTextInput(e.target.value)}
+            />
+            <Button mt={8} mb={8} type='submit' color='orange' onClick={() => { }}>form button</Button>
           </Form>
         </FlexBox>
       </Flex>
