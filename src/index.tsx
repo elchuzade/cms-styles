@@ -64,20 +64,21 @@ export const PlayGround = ({ text }: Props) => {
     <div className={styles.body}>
       <Flex>
         <FlexBox width={50}>
-          <Button m={8} color='light' onClick={() => { }}>blah</Button>
-          <Button m={8} color='dark' onClick={() => { }}>blah</Button>
-          <Button m={8} color='red' onClick={() => { }}>blah</Button>
-          <Button m={8} color='blue' onClick={() => { }}>blah</Button>
-          <Button m={8} color='purple' onClick={() => { }}>blah</Button>
-          <Button m={8} color='green' onClick={() => { }}>blah</Button>
-          <Button m={8} color='orange' onClick={() => { }}>blah</Button>
-          <Button small m={8} color='light' onClick={() => { }}>blah</Button>
-          <Button small m={8} color='dark' onClick={() => { }}>blah</Button>
-          <Button small m={8} color='red' onClick={() => { }}>blah</Button>
-          <Button small m={8} color='blue' onClick={() => { }}>blah</Button>
-          <Button small m={8} color='purple' onClick={() => { }}>blah</Button>
-          <Button small m={8} color='green' onClick={() => { }}>blah</Button>
-          <Button small m={8} color='orange' onClick={() => { }}>blah</Button>
+          <Button m={8} onClick={() => { }}>default</Button>
+          <Button m={8} color='light' onClick={() => { }}>light</Button>
+          <Button m={8} color='dark' onClick={() => { }}>dark</Button>
+          <Button m={8} color='red' onClick={() => { }}>red</Button>
+          <Button m={8} color='blue' onClick={() => { }}>blue</Button>
+          <Button m={8} color='purple' onClick={() => { }}>purple</Button>
+          <Button m={8} color='green' onClick={() => { }}>green</Button>
+          <Button m={8} color='orange' onClick={() => { }}>orange</Button>
+          <Button small m={8} color='light' onClick={() => { }}>light</Button>
+          <Button small m={8} color='dark' onClick={() => { }}>dark</Button>
+          <Button small m={8} color='red' onClick={() => { }}>red</Button>
+          <Button small m={8} color='blue' onClick={() => { }}>blue</Button>
+          <Button small m={8} color='purple' onClick={() => { }}>purple</Button>
+          <Button small m={8} color='green' onClick={() => { }}>green</Button>
+          <Button small m={8} color='orange' onClick={() => { }}>orange</Button>
         </FlexBox>
         <FlexBox width={50}>
           <Box m={20}>

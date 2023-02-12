@@ -1,17 +1,17 @@
 .selectInput {
-  height: 32px;
+  height: 36px;
   padding: 0;
   margin: 0 !important;
   border: 1px solid var(--light);
   border-radius: 0.5rem;
   padding-left: 0.5rem;
-  font-size: 14px;
+  font-size: 16px;
   outline: none;
 }
 
 .selectInput-small {
-  height: 22px !important;
-  font-size: 10px;
+  height: 28px !important;
+  font-size: 12px;
 }
 
 .selectInput:hover {

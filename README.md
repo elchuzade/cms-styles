@@ -22,7 +22,7 @@ const Example = () => {
     return (
       <Box>
         <Text>Text</Text>
-        <Buttonon Click={() => { }}>Button</Button>
+        <Button onClick={() => { }}>Button</Button>
       </Box>
     )
 }

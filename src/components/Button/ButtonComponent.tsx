@@ -12,7 +12,8 @@ export interface ButtonComponentProps extends CustomizableComponent {
 }
 
 const defaultProps = {
-  small: false
+  small: false,
+  color: 'purple'
 }
 
 const ButtonComponent = (props: ButtonComponentProps) => {
