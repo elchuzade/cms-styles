@@ -1,36 +1,31 @@
 import React from 'react'
-import styles from './TextareaInput.styles.css'
+import styles from './SelectInput.styles.css'
 
-export interface TextareaInputComponentProps extends CustomizableComponent {
+export interface SelectInputComponentProps extends CustomizableComponent {
+  children: React.ReactNode;
   name: string;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   placeholder?: string;
   disabled?: boolean;
   small?: boolean;
-  rows?: number;
-  cols?: number;
 }
 
 const defaultProps = {
-  placeholder: 'type here...',
+  placeholder: 'Click to select',
   disabled: false,
-  small: false,
-  rows: 3,
+  small: false
 }
 
-const TextareaInputComponent = (props: TextareaInputComponentProps) => {
+const SelectInputComponent = (props: SelectInputComponentProps) => {
   return (
-    <textarea
+    <select
       id={props.id || undefined}
-      rows={props.rows}
-      cols={props.cols}
       name={props.name}
-      value={props.value}
-      placeholder={props.placeholder}
-      disabled={props.disabled}
       onChange={props.onChange}
-      className={`${styles.textInput} ${props.small ? styles['textInput-small'] : ''} ${props.className || ''}`}
+      disabled={props.disabled}
+      placeholder={props.placeholder}
+      className={`${styles.selectInput} ${props.small ? styles['selectInput-small'] : ''} ${props.className || ''}`}
       style={{
         marginLeft: props.ml || props.m || '',
         marginRight: props.mr || props.m || '',
@@ -43,10 +38,12 @@ const TextareaInputComponent = (props: TextareaInputComponentProps) => {
         ...props.style
       }}
       {...props.tagProps}
-    />
+    >
+      {props.children}
+    </select>
   )
 }
 
-TextareaInputComponent.defaultProps = defaultProps
+SelectInputComponent.defaultProps = defaultProps
 
-export default TextareaInputComponent
+export default SelectInputComponent

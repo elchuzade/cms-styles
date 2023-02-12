@@ -13,7 +13,7 @@ const defaultProps = {
 const TextComponent = (props: TextComponentProps) => {
   return (
     <p
-      id={props.id || ''}
+      id={props.id || undefined}
       className={`${styles.text} ${props.small ? styles['text-small'] : ''} ${props.className || ''}`}
       style={{ ...props.style }}
       {...props.tagProps}

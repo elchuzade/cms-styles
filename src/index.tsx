@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
-import { Box, Flex, FlexBox, Button, Text, Title, Form, TextInput, TextareaInput } from './importers/Layout'
+import { Box, Flex, FlexBox, Button, Text, Title, Form, TextInput, TextareaInput, SelectInput } from './importers/Layout'
 
 interface Props {
   text: string
@@ -8,6 +8,7 @@ interface Props {
 
 export const ExampleComponent = ({ text }: Props) => {
   const [textInput, setTextInput] = useState('')
+  const [selectInput, setSelectInput] = useState('')
 
   return (
     <div className={styles.body}>
@@ -52,6 +53,7 @@ export const ExampleComponent = ({ text }: Props) => {
               ml={16}
               mt={16}
               mb={16}
+              type='number'
               name='test'
               value={textInput}
               onChange={e => setTextInput(e.target.value)}
@@ -61,16 +63,35 @@ export const ExampleComponent = ({ text }: Props) => {
             />
             <Button mt={8} mb={8} type='submit' color='orange' onClick={() => { }}>form button</Button>
             <Text small>{text}</Text>
-            <TextareaInput
-              ml={16}
-              mt={16}
-              mb={16}
-              name='test'
-              value={textInput}
-              onChange={e => setTextInput(e.target.value)}
-              rows={10}
-            />
           </Form>
+        </FlexBox>
+        <FlexBox>
+          <TextareaInput
+            ml={16}
+            name='test'
+            value={textInput}
+            onChange={e => setTextInput(e.target.value)}
+            rows={10}
+          />
+        </FlexBox>
+      </Flex>
+      <Flex>
+        <FlexBox>
+          <Button type='submit' color='orange' onClick={() => { }}>form button</Button>
+        </FlexBox>
+        <FlexBox>
+          <SelectInput value={selectInput} name='selectInput' onChange={e => setSelectInput(e.target.value)}>
+            <option value='qwe1'>blah1</option>
+            <option value='qwe2'>blah2</option>
+            <option value='qwe3'>blah3</option>
+          </SelectInput>
+        </FlexBox>
+        <FlexBox>
+          <SelectInput small value={selectInput} name='selectInput' onChange={e => setSelectInput(e.target.value)}>
+            <option value='qwe1'>blah1</option>
+            <option value='qwe2'>blah2</option>
+            <option value='qwe3'>blah3</option>
+          </SelectInput>
         </FlexBox>
       </Flex>
     </div>

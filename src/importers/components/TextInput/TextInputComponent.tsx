@@ -21,7 +21,7 @@ const defaultProps = {
 const TextInputComponent = (props: TextInputComponentProps) => {
   return (
     <input
-      id={props.id || ''}
+      id={props.id || undefined}
       type={props.type || 'text'}
       name={props.name}
       value={props.value}

@@ -10,7 +10,7 @@ export interface FormComponentProps extends CustomizableComponent {
 const FormComponent = (props: FormComponentProps) => {
   return (
     <form
-      id={props.id || ''}
+      id={props.id || undefined}
       className={`${styles.form} ${props.className || ''}`}
       style={{
         width: props.width ? `${props.width}%` : '',

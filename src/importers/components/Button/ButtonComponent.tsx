@@ -25,7 +25,7 @@ const ButtonComponent = (props: ButtonComponentProps) => {
   }, [])
   return (
     <button
-      id={props.id || ''}
+      id={props.id || undefined}
       type={props.type || 'button'}
       onClick={props.onClick}
       className={`${styles.button} ${props.small ? styles['button-small'] : ''} ${styles[buttonBackground]} ${props.className || ''}`}

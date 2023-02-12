@@ -10,7 +10,7 @@ export interface BoxComponentProps extends CustomizableComponent {
 const BoxComponent = (props: BoxComponentProps) => {
   return (
     <div
-      id={props.id || ''}
+      id={props.id || undefined}
       className={`${styles.box} ${props.className || ''}`}
       style={{
         width: props.width ? `${props.width}%` : '',

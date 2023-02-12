@@ -10,7 +10,7 @@ export interface FlexComponentProps extends CustomizableComponent {
 const FlexComponent = (props: FlexComponentProps) => {
   return (
     <div
-      id={props.id || ''}
+      id={props.id || undefined}
       className={`${styles.flex} ${props.className || ''}`}
       style={{
         alignItems: props.alignItems || '',
