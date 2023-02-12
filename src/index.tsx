@@ -1,6 +1,6 @@
 import * as React from 'react'
-// import styles from './styles.module.css'
-import { Box, Flex, FlexBox, Button, Text, Title } from './importers/Layout'
+import styles from './styles.module.css'
+import { Box, Flex, FlexBox, Button, Text, Title, Form } from './importers/Layout'
 
 interface Props {
   text: string
@@ -8,7 +8,7 @@ interface Props {
 
 export const ExampleComponent = ({ text }: Props) => {
   return (
-    <Box>
+    <div className={styles.body}>
       <Flex>
         <FlexBox width={50}>
           <Button m={8} color='light' onClick={() => { }}>blah</Button>
@@ -27,7 +27,12 @@ export const ExampleComponent = ({ text }: Props) => {
           <Title size={2}>this is paragraph</Title>
           <Title size={3}>this is paragraph</Title>
         </FlexBox>
+        <FlexBox width={100}>
+          <Form>
+            <Button m={8} type='submit' color='orange' onClick={() => { }}>form button</Button>
+          </Form>
+        </FlexBox>
       </Flex>
-    </Box>
+    </div>
   )
 }

@@ -1,5 +1,5 @@
 /dist
 /node_modules
-/example
+/example/node_modules
 package-lock.json
 .DS_Store

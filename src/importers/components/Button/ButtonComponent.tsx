@@ -22,7 +22,7 @@ export interface ButtonComponentProps extends BoxComponentProps {
 }
 
 const ButtonComponent = (props: ButtonComponentProps) => {
-  const [buttonBackground, setButtonBackground] = useState<string>('')
+  const [buttonBackground, setButtonBackground] = useState<string>('purple')
 
   useEffect(() => {
     if (props.color) {

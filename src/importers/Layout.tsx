@@ -5,6 +5,7 @@ import FlexBoxComponent, { FlexBoxComponentProps } from './components/FlexBox/Fl
 import ButtonComponent, { ButtonComponentProps } from './components/Button/ButtonComponent'
 import TextComponent, { TextComponentProps } from './components/Text/TextComponent'
 import TitleComponent, { TitleComponentProps } from './components/Title/TitleComponent'
+import FormComponent, { FormComponentProps } from './components/Form/FormComponent'
 
 export const Box = (props: BoxComponentProps) => {
   return <BoxComponent {...props} />
@@ -28,4 +29,8 @@ export const Text = (props: TextComponentProps) => {
 
 export const Title = (props: TitleComponentProps) => {
   return <TitleComponent {...props} />
+}
+
+export const Form = (props: FormComponentProps) => {
+  return <FormComponent {...props} />
 }
