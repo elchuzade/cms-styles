@@ -13,16 +13,21 @@ npm install --save cms-styles
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'cms-styles'
+import { Box, Text, Button } from 'cms-styles'
 import 'cms-styles/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const Example = () => {
+    return (
+      <Box>
+        <Text>Text</Text>
+        <Buttonon Click={() => { }}>Button</Button>
+      </Box>
+    )
 }
+
+export default Example
 ```
 
 ## License
