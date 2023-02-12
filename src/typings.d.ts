@@ -19,7 +19,8 @@ declare module '*.svg' {
 interface Component {
   id?: string;
   className?: string;
-  style?: { [className: string]: string }
+  style?: { [className: string]: string },
+  tagProps?: { [className: string]: string | number | boolean }
 }
 
 interface CustomizableComponent extends Component {

@@ -25,6 +25,7 @@ const FormComponent = (props: FormComponentProps) => {
         paddingBottom: props.pb || props.p || '',
         ...props.style
       }}
+      {...props.tagProps}
     >
       {props.children}
     </form>

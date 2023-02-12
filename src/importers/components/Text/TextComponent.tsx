@@ -16,6 +16,7 @@ const TextComponent = (props: TextComponentProps) => {
       id={props.id || ''}
       className={`${styles.text} ${props.small ? styles['text-small'] : ''} ${props.className || ''}`}
       style={{ ...props.style }}
+      {...props.tagProps}
     >
       {props.children}
     </p>

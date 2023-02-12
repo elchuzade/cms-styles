@@ -25,6 +25,7 @@ const BoxComponent = (props: BoxComponentProps) => {
         paddingBottom: props.pb || props.p || '',
         ...props.style
       }}
+      {...props.tagProps}
     >{props.children}</div>
   )
 }

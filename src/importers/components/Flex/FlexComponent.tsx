@@ -25,6 +25,7 @@ const FlexComponent = (props: FlexComponentProps) => {
         paddingBottom: props.pb || props.p || '',
         ...props.style
       }}
+      {...props.tagProps}
     >{props.children}</div>
   )
 }

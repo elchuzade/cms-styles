@@ -1,28 +1,30 @@
 import React from 'react'
-import styles from './TextInput.styles.css'
+import styles from './TextareaInput.styles.css'
 
-export interface TextInputComponentProps extends CustomizableComponent {
+export interface TextareaInputComponentProps extends CustomizableComponent {
   name: string;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   placeholder?: string;
   disabled?: boolean;
   small?: boolean;
-  type?: 'button' | 'checkbox' | 'color' | 'date' | 'datetime-local' | 'email' | 'file' | 'hidden' | 'image' | 'month' | 'number' | 'password' | 'radio' | 'range' | 'reset' | 'search' | 'submit' | 'tel' | 'text' | 'time' | 'url' | 'week',
+  rows?: number;
+  cols?: number;
 }
 
 const defaultProps = {
-  type: 'text',
   placeholder: 'type here...',
   disabled: false,
-  small: false
+  small: false,
+  rows: 3,
 }
 
-const TextInputComponent = (props: TextInputComponentProps) => {
+const TextareaInputComponent = (props: TextareaInputComponentProps) => {
   return (
-    <input
+    <textarea
       id={props.id || ''}
-      type={props.type || 'text'}
+      rows={props.rows}
+      cols={props.cols}
       name={props.name}
       value={props.value}
       placeholder={props.placeholder}
@@ -45,6 +47,6 @@ const TextInputComponent = (props: TextInputComponentProps) => {
   )
 }
 
-TextInputComponent.defaultProps = defaultProps
+TextareaInputComponent.defaultProps = defaultProps
 
-export default TextInputComponent
+export default TextareaInputComponent

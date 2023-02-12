@@ -42,6 +42,7 @@ const ButtonComponent = (props: ButtonComponentProps) => {
         paddingBottom: props.pb || props.p || '',
         ...props.style
       }}
+      {...props.tagProps}
     >{props.children}</button>
   )
 }

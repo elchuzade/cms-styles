@@ -7,6 +7,7 @@ import TextComponent, { TextComponentProps } from './components/Text/TextCompone
 import TitleComponent, { TitleComponentProps } from './components/Title/TitleComponent'
 import FormComponent, { FormComponentProps } from './components/Form/FormComponent'
 import TextInputComponent, { TextInputComponentProps } from './components/TextInput/TextInputComponent'
+import TextareaInputComponent, { TextareaInputComponentProps } from './components/TextareaInput/TextareaInputComponent'
 
 export const Box = (props: BoxComponentProps) => {
   return <BoxComponent {...props} />
@@ -38,4 +39,8 @@ export const Form = (props: FormComponentProps) => {
 
 export const TextInput = (props: TextInputComponentProps) => {
   return <TextInputComponent {...props} />
+}
+
+export const TextareaInput = (props: TextareaInputComponentProps) => {
+  return <TextareaInputComponent {...props} />
 }

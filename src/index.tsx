@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
-import { Box, Flex, FlexBox, Button, Text, Title, Form, TextInput } from './importers/Layout'
+import { Box, Flex, FlexBox, Button, Text, Title, Form, TextInput, TextareaInput } from './importers/Layout'
 
 interface Props {
   text: string
@@ -55,9 +55,21 @@ export const ExampleComponent = ({ text }: Props) => {
               name='test'
               value={textInput}
               onChange={e => setTextInput(e.target.value)}
+              tagProps={{
+                required: true
+              }}
             />
             <Button mt={8} mb={8} type='submit' color='orange' onClick={() => { }}>form button</Button>
             <Text small>{text}</Text>
+            <TextareaInput
+              ml={16}
+              mt={16}
+              mb={16}
+              name='test'
+              value={textInput}
+              onChange={e => setTextInput(e.target.value)}
+              rows={10}
+            />
           </Form>
         </FlexBox>
       </Flex>
