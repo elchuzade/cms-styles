@@ -1,13 +1,17 @@
 import React from 'react'
 import styles from './Text.styles.css'
 
-export interface TextComponentProps {
+export interface TextComponentProps extends CustomizableComponent {
   children: React.ReactNode;
 }
 
 const TextComponent = (props: TextComponentProps) => {
   return (
-    <p className={styles.text}>
+    <p
+      id={props.id || ''}
+      className={`${styles.text} ${props.className || ''}`}
+      style={{ ...props.style }}
+    >
       {props.children}
     </p>
   )

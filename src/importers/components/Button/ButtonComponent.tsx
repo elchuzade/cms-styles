@@ -1,24 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { BoxComponentProps } from '../Box/BoxComponent';
 import styles from './Button.styles.css'
 
-export interface ButtonComponentProps extends BoxComponentProps {
+export interface ButtonComponentProps extends CustomizableComponent {
   children: React.ReactNode;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   color?: 'blue' | 'green' | 'orange' | 'red' | 'purple' | 'dark' | 'light';
   width?: number; // width in percentages in case the parent is flex
   alignSelf?: string; // works in case the parent is flex
-  m?: number; // same margin all around
-  p?: number; // same padding all around
-  ml?: number; // left margin in pixels
-  mr?: number; // right margin in pixels
-  mt?: number; // top margin in pixels
-  mb?: number; // bottom margin in pixels
-  pl?: number; // left padding in pixels
-  pr?: number; // right padding in pixels
-  pt?: number; // top padding in pixels
-  pb?: number; // bottom padding in pixels
 }
 
 const ButtonComponent = (props: ButtonComponentProps) => {

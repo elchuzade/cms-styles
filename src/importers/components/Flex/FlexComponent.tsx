@@ -1,8 +1,7 @@
 import React from 'react'
 import styles from './Flex.styles.css'
-import { BoxComponentProps } from '../Box/BoxComponent'
 
-export interface FlexComponentProps extends BoxComponentProps {
+export interface FlexComponentProps extends CustomizableComponent {
   children: React.ReactNode;
   alignItems?: string; // to align children positions
   justifyContent?: string; // to justify children positions
@@ -10,7 +9,9 @@ export interface FlexComponentProps extends BoxComponentProps {
 
 const FlexComponent = (props: FlexComponentProps) => {
   return (
-    <div className={styles.flex}
+    <div
+      id={props.id || ''}
+      className={`${styles.flex} ${props.className || ''}`}
       style={{
         alignItems: props.alignItems || '',
         justifyContent: props.justifyContent || '',
@@ -21,7 +22,8 @@ const FlexComponent = (props: FlexComponentProps) => {
         paddingLeft: props.pl || props.p || '',
         paddingRight: props.pr || props.p || '',
         paddingTop: props.pt || props.p || '',
-        paddingBottom: props.pb || props.p || ''
+        paddingBottom: props.pb || props.p || '',
+        ...props.style
       }}
     >{props.children}</div>
   )

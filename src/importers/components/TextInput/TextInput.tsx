@@ -1,15 +1,13 @@
 import React from 'react'
+import { BoxComponentProps } from '../Box/BoxComponent';
 import styles from './Form.styles.css'
 
-export interface FormComponentProps extends CustomizableComponent {
-  children: React.ReactNode;
-  width?: number; // width in percentages in case the parent is flex
-  alignSelf?: string; // works in case the parent is flex
+export interface TextInputProps extends BoxComponentProps {
 }
 
-const FormComponent = (props: FormComponentProps) => {
+const TextInput = (props: TextInputProps) => {
   return (
-    <form
+    <input
       id={props.id || ''}
       className={`${styles.form} ${props.className || ''}`}
       style={{
@@ -25,10 +23,8 @@ const FormComponent = (props: FormComponentProps) => {
         paddingBottom: props.pb || props.p || '',
         ...props.style
       }}
-    >
-      {props.children}
-    </form>
+    />
   )
 }
 
-export default FormComponent
+export default TextInput
