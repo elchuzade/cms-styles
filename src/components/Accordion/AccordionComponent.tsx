@@ -26,7 +26,7 @@ const AccordionComponet = (props: AccordionComponentProps) => {
       {...props.tagProps}
     >
       {props.children?.map((child, i) =>
-        <div className={styles.accordionChild}>
+        <div className={styles.accordionChild} key={i}>
           <div
             onClick={() => setActiveChildIndex(i)}
             className={`${styles.accordionChildTitle} ${i === 0 ? styles.accordionTopRadius : ''} ${i === props.children.length - 1 ? styles.accordionBottomRadius : ''}`}

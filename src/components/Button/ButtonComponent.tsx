@@ -7,9 +7,11 @@ export interface ButtonComponentProps extends CustomizableComponentProps {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   color?: 'blue' | 'green' | 'orange' | 'red' | 'purple' | 'dark' | 'light';
-  width?: number; // width in percentages in case the parent is flex
-  alignSelf?: string; // works in case the parent is flex
+  width?: number;
+  height?: number;
+  alignSelf?: string;
   small?: boolean;
+  borderRound?: boolean;
 }
 
 const defaultProps = {
@@ -30,9 +32,10 @@ const ButtonComponent = (props: ButtonComponentProps) => {
       id={props.id || undefined}
       type={props.type || 'button'}
       onClick={props.onClick}
-      className={`${styles.button} ${props.small ? styles['button-small'] : ''} ${styles[buttonBackground]} ${props.className || ''}`}
+      className={`${styles.button} ${props.small ? styles.buttonSmall : ''} ${props.borderRound ? styles.buttonRound : ''} ${styles[buttonBackground]} ${props.className || ''}`}
       style={{
-        width: props.width ? `${props.width}%` : '',
+        width: props.width ? `${props.width}px` : '',
+        height: props.height ? `${props.height}px` : '',
         alignSelf: props.alignSelf || '',
         ...getCustomizableComponentStyles(props),
         ...props.style

@@ -1,0 +1,50 @@
+.modal {
+  background: var(--lightBackground);
+  padding: 16px;
+  border-radius: 16px;
+  z-index: 101
+}
+
+.modalWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalCover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
+.modalCloseButton {
+  border: none;
+  outline: none;
+  float: right;
+  width: 28px;
+  height: 28px;
+  margin-top: -8px;
+  margin-right: -8px;
+  background: none;
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.modalCloseButton:hover {
+  cursor: pointer;
+  color: var(--hoverDark);
+}
+
+.modalCloseButton:active {
+  color: var(--activeDark);
+}

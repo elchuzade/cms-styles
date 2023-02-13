@@ -13,6 +13,7 @@ import SelectInputComponent, { SelectInputComponentProps } from './components/Se
 import CardComponent, { CardComponentProps } from './components/Card/CardComponent'
 import ImageComponent, { ImageComponentProps } from './components/Image/ImageComponent'
 import AccordionComponent, { AccordionComponentProps } from './components/Accordion/AccordionComponent'
+import ModalComponent, { ModalComponentProps } from './components/Modal/ModalComponent'
 
 export const Box = (props: BoxComponentProps) => {
   return <BoxComponent {...props} />
@@ -66,6 +67,10 @@ export const Accordion = (props: AccordionComponentProps) => {
   return <AccordionComponent {...props} />
 }
 
+export const Modal = (props: ModalComponentProps) => {
+  return <ModalComponent {...props} />
+}
+
 interface Props {
   text: string
 }
@@ -73,6 +78,7 @@ interface Props {
 export const PlayGround = ({ text }: Props) => {
   const [textInput, setTextInput] = useState<string>('')
   const [selectInput, setSelectInput] = useState<string>('')
+  const [modal, setModal] = useState<boolean>(true)
 
   return (
     <div className={styles.body}>
@@ -201,7 +207,7 @@ export const PlayGround = ({ text }: Props) => {
           </Card>
         </FlexBox>
         <FlexBox>
-          <Card m={16} p={12} width={240}>
+          <Card m={16} p={12} width={240} style={{ backgroundColor: 'rgb(45,47,49)', color: 'white' }} cardHover>
             <Image src='https://picsum.photos/240/140' borderRadius={8} />
             <Box mt={4}>
               <Title mb={4}>Farida Elchuzade</Title>
@@ -228,6 +234,13 @@ export const PlayGround = ({ text }: Props) => {
         />
       </Box>
       <Box mt={300}>footer</Box>
+      <Modal onClose={() => setModal(false)} opened={modal}>
+        <Title mb={16}>Modal Title</Title>
+        <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ex nam vel veritatis voluptates quos sequi est dolorum enim reiciendis ipsum in rerum temporibus, explicabo repellat magni, consectetur sunt voluptatibus.</Text>
+        <Flex mt={16}>
+          <FlexBox moveRight><Button color='green'>Save</Button></FlexBox>
+        </Flex>
+      </Modal>
     </div>
   )
 }
