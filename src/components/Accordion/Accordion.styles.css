@@ -1,0 +1,30 @@
+.accordion {
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.accordionChild {}
+
+.accordionChildTitle {
+  padding: 16px;
+  background: var(--lightBackground);
+}
+
+.accordionChildTitle:hover {
+  cursor: pointer;
+  background: var(--light);
+}
+
+.accordionChildContent {
+  padding: 16px;
+}
+
+.accordionTopRadius {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.accordionBottomRadius {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

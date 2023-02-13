@@ -12,6 +12,7 @@ import TextareaInputComponent, { TextareaInputComponentProps } from './component
 import SelectInputComponent, { SelectInputComponentProps } from './components/SelectInput/SelectInputComponent'
 import CardComponent, { CardComponentProps } from './components/Card/CardComponent'
 import ImageComponent, { ImageComponentProps } from './components/Image/ImageComponent'
+import AccordionComponent, { AccordionComponentProps } from './components/Accordion/AccordionComponent'
 
 export const Box = (props: BoxComponentProps) => {
   return <BoxComponent {...props} />
@@ -59,6 +60,10 @@ export const Card = (props: CardComponentProps) => {
 
 export const Image = (props: ImageComponentProps) => {
   return <ImageComponent {...props} />
+}
+
+export const Accordion = (props: AccordionComponentProps) => {
+  return <AccordionComponent {...props} />
 }
 
 interface Props {
@@ -196,7 +201,7 @@ export const PlayGround = ({ text }: Props) => {
           </Card>
         </FlexBox>
         <FlexBox>
-          <Card m={16} width={240}>
+          <Card m={16} p={12} width={240}>
             <Image src='https://picsum.photos/240/140' borderRadius={8} />
             <Box mt={4}>
               <Title mb={4}>Farida Elchuzade</Title>
@@ -205,6 +210,24 @@ export const PlayGround = ({ text }: Props) => {
           </Card>
         </FlexBox>
       </Flex>
-    </div >
+      <Box m={16}>
+        <Accordion
+          width={400}
+          children={[{
+            title: <Flex alignItems='center'><Image mr={8} src='https://picsum.photos/32?1' borderRound /><Text>Title 1</Text></Flex>,
+            content: <Box><Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, dolore?</Text></Box>,
+          },
+          {
+            title: <Flex alignItems='center'><Image mr={8} src='https://picsum.photos/32?2' borderRound /><Text>Title 2</Text></Flex>,
+            content: <Box><Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, dolore?</Text></Box>,
+          },
+          {
+            title: <Flex alignItems='center'><Image mr={8} src='https://picsum.photos/32?3' borderRound /><Text>Title 3</Text></Flex>,
+            content: <Box><Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, dolore?</Text></Box>,
+          }]}
+        />
+      </Box>
+      <Box mt={300}>footer</Box>
+    </div>
   )
 }
