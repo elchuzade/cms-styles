@@ -16,14 +16,14 @@ declare module '*.svg' {
   export { svgComponent as ReactComponent }
 }
 
-interface Component {
+interface ComponentProps {
   id?: string;
   className?: string;
   style?: { [className: string]: string },
   tagProps?: { [className: string]: string | number | boolean }
 }
 
-interface CustomizableComponent extends Component {
+interface CustomizableComponentProps extends ComponentProps {
   m?: number; // same margin all around
   p?: number; // same padding all around
   ml?: number; // left margin in pixels

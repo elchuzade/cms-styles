@@ -1,9 +1,12 @@
 import React from 'react'
+import { getCustomizableComponentStyles } from '../../utils/styleUtils';
 import styles from './Text.styles.css'
 
-export interface TextComponentProps extends CustomizableComponent {
+export interface TextComponentProps extends CustomizableComponentProps {
   children: React.ReactNode;
   small?: boolean;
+  ellipsis?: number;
+  fontSize?: number;
 }
 
 const defaultProps = {
@@ -15,7 +18,11 @@ const TextComponent = (props: TextComponentProps) => {
     <p
       id={props.id || undefined}
       className={`${styles.text} ${props.small ? styles['text-small'] : ''} ${props.className || ''}`}
-      style={{ ...props.style }}
+      style={{
+        ...getCustomizableComponentStyles(props),
+        fontSize: props.fontSize || '16px',
+        ...props.style
+      }}
       {...props.tagProps}
     >
       {props.children}

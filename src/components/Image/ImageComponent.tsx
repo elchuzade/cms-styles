@@ -1,29 +1,33 @@
 import React from 'react'
 import { getCustomizableComponentStyles } from '../../utils/styleUtils';
-import styles from './Box.styles.css'
+import styles from './Image.styles.css'
 
-export interface BoxComponentProps extends CustomizableComponentProps {
-  children: React.ReactNode;
+export interface ImageComponentProps extends CustomizableComponentProps {
+  src: string;
   width?: number; // width in percentages in case the parent is flex
   height?: number; // height in percentages
   alignSelf?: string; // works in case the parent is flex
+  borderRound?: boolean;
+  borderRadius?: number;
 }
 
-const BoxComponent = (props: BoxComponentProps) => {
+const ImageComponent = (props: ImageComponentProps) => {
   return (
-    <div
+    <img
       id={props.id || undefined}
       className={`${styles.box} ${props.className || ''}`}
+      src={props.src}
       style={{
         width: props.width ? `${props.width}%` : '',
         height: props.height || '',
         alignSelf: props.alignSelf || '',
+        borderRadius: props.borderRound ? '50%' : (props.borderRadius || 0),
         ...getCustomizableComponentStyles(props),
         ...props.style
       }}
       {...props.tagProps}
-    >{props.children}</div>
+    />
   )
 }
 
-export default BoxComponent
+export default ImageComponent

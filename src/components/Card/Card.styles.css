@@ -1,0 +1,13 @@
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 3px 8px 0px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  overflow: hidden;
+  background: var(--lightBackground);
+}
+
+.cardHover:hover {
+  cursor: pointer;
+  filter: brightness(95%);
+  -webkit-filter: brightness(95%);
+}

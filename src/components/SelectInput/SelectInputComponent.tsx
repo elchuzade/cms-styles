@@ -1,7 +1,8 @@
 import React from 'react'
+import { getCustomizableComponentStyles } from '../../utils/styleUtils';
 import styles from './SelectInput.styles.css'
 
-export interface SelectInputComponentProps extends CustomizableComponent {
+export interface SelectInputComponentProps extends CustomizableComponentProps {
   children: React.ReactNode;
   name: string;
   value: string;
@@ -27,14 +28,7 @@ const SelectInputComponent = (props: SelectInputComponentProps) => {
       placeholder={props.placeholder}
       className={`${styles.selectInput} ${props.small ? styles['selectInput-small'] : ''} ${props.className || ''}`}
       style={{
-        marginLeft: props.ml || props.m || '',
-        marginRight: props.mr || props.m || '',
-        marginTop: props.mt || props.m || '',
-        marginBottom: props.mb || props.m || '',
-        paddingLeft: props.pl || props.p || '',
-        paddingRight: props.pr || props.p || '',
-        paddingTop: props.pt || props.p || '',
-        paddingBottom: props.pb || props.p || '',
+        ...getCustomizableComponentStyles(props),
         ...props.style
       }}
       {...props.tagProps}

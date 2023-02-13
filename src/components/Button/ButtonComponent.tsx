@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { getCustomizableComponentStyles } from '../../utils/styleUtils';
 import styles from './Button.styles.css'
 
-export interface ButtonComponentProps extends CustomizableComponent {
+export interface ButtonComponentProps extends CustomizableComponentProps {
   children: React.ReactNode;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
@@ -33,14 +34,7 @@ const ButtonComponent = (props: ButtonComponentProps) => {
       style={{
         width: props.width ? `${props.width}%` : '',
         alignSelf: props.alignSelf || '',
-        marginLeft: props.ml || props.m || '',
-        marginRight: props.mr || props.m || '',
-        marginTop: props.mt || props.m || '',
-        marginBottom: props.mb || props.m || '',
-        paddingLeft: props.pl || props.p || '',
-        paddingRight: props.pr || props.p || '',
-        paddingTop: props.pt || props.p || '',
-        paddingBottom: props.pb || props.p || '',
+        ...getCustomizableComponentStyles(props),
         ...props.style
       }}
       {...props.tagProps}

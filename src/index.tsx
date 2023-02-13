@@ -10,6 +10,8 @@ import FormComponent, { FormComponentProps } from './components/Form/FormCompone
 import TextInputComponent, { TextInputComponentProps } from './components/TextInput/TextInputComponent'
 import TextareaInputComponent, { TextareaInputComponentProps } from './components/TextareaInput/TextareaInputComponent'
 import SelectInputComponent, { SelectInputComponentProps } from './components/SelectInput/SelectInputComponent'
+import CardComponent, { CardComponentProps } from './components/Card/CardComponent'
+import ImageComponent, { ImageComponentProps } from './components/Image/ImageComponent'
 
 export const Box = (props: BoxComponentProps) => {
   return <BoxComponent {...props} />
@@ -51,6 +53,13 @@ export const SelectInput = (props: SelectInputComponentProps) => {
   return <SelectInputComponent {...props} />
 }
 
+export const Card = (props: CardComponentProps) => {
+  return <CardComponent {...props} />
+}
+
+export const Image = (props: ImageComponentProps) => {
+  return <ImageComponent {...props} />
+}
 
 interface Props {
   text: string
@@ -145,6 +154,57 @@ export const PlayGround = ({ text }: Props) => {
           </SelectInput>
         </FlexBox>
       </Flex>
-    </div>
+      <Flex m={32}>
+        <FlexBox>
+          <Card m={16} p={0} width={240} height={240} cardHover>
+            <Image src='https://picsum.photos/240/140' />
+            <Box m={8}>
+              <Title mb={4}>Farida Elchuzade</Title>
+              <Text fontSize={14}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam sequi optio cupiditate.</Text>
+            </Box>
+          </Card>
+        </FlexBox>
+        <FlexBox>
+          <Card m={16} p={0} width={340}>
+            <Flex p={8} alignItems='center'>
+              <FlexBox>
+                <Image borderRound src='https://picsum.photos/40' mr={8} />
+              </FlexBox>
+              <FlexBox>
+                <Title>Kamran Elchuzade</Title>
+              </FlexBox>
+              <FlexBox moveRight>
+                <Button small color='light'>Like</Button>
+              </FlexBox>
+            </Flex>
+            <Box height={140}>
+              <Image src='https://picsum.photos/340/140' />
+            </Box>
+            <Box p={8}>
+              <Title mb={4}>Frontend Engineer</Title>
+              <Text mb={8} fontSize={14}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est aut similique fuga a possimus esse tenetur repudiandae vero deleniti corrupti?</Text>
+              <Flex>
+                <FlexBox>
+                  <Button small color='purple' mr={8}>Read more</Button>
+                  <Button small color='dark' mr={8}>Share</Button>
+                </FlexBox>
+                <FlexBox moveRight>
+                  <Button small color='light'>Like</Button>
+                </FlexBox>
+              </Flex>
+            </Box>
+          </Card>
+        </FlexBox>
+        <FlexBox>
+          <Card m={16} width={240}>
+            <Image src='https://picsum.photos/240/140' borderRadius={8} />
+            <Box mt={4}>
+              <Title mb={4}>Farida Elchuzade</Title>
+              <Text fontSize={14}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam sequi optio cupiditate.</Text>
+            </Box>
+          </Card>
+        </FlexBox>
+      </Flex>
+    </div >
   )
 }

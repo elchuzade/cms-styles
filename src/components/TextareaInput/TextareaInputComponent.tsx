@@ -1,7 +1,8 @@
 import React from 'react'
+import { getCustomizableComponentStyles } from '../../utils/styleUtils';
 import styles from './TextareaInput.styles.css'
 
-export interface TextareaInputComponentProps extends CustomizableComponent {
+export interface TextareaInputComponentProps extends CustomizableComponentProps {
   name: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
@@ -32,14 +33,7 @@ const TextareaInputComponent = (props: TextareaInputComponentProps) => {
       onChange={props.onChange}
       className={`${styles.textInput} ${props.small ? styles['textInput-small'] : ''} ${props.className || ''}`}
       style={{
-        marginLeft: props.ml || props.m || '',
-        marginRight: props.mr || props.m || '',
-        marginTop: props.mt || props.m || '',
-        marginBottom: props.mb || props.m || '',
-        paddingLeft: props.pl || props.p || '',
-        paddingRight: props.pr || props.p || '',
-        paddingTop: props.pt || props.p || '',
-        paddingBottom: props.pb || props.p || '',
+        ...getCustomizableComponentStyles(props),
         ...props.style
       }}
       {...props.tagProps}
