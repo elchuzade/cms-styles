@@ -43,14 +43,13 @@ export const getCustomizableComponentStyles = (
     style.paddingLeft = props.pl
   }
   if (props.pr || props.pr === 0) {
-    style.paddingLeft = props.pr
+    style.paddingRight = props.pr
   }
   if (props.pt || props.pt === 0) {
-    style.paddingLeft = props.pt
+    style.paddingTop = props.pt
   }
   if (props.pb || props.pb === 0) {
-    style.paddingLeft = props.pb
+    style.paddingBottom = props.pb
   }
-
   return style
 }
