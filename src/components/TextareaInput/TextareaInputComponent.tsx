@@ -1,16 +1,16 @@
 import React from 'react'
-import { getCustomizableComponentStyles } from '../../utils/styleUtils';
+import { getCustomizableComponentStyles } from '../../utils/styleUtils'
 import styles from './TextareaInput.styles.css'
 
 export interface TextareaInputComponentProps extends CustomizableComponentProps {
-  name: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
-  placeholder?: string;
-  disabled?: boolean;
-  small?: boolean;
-  rows?: number;
-  cols?: number;
+  name: string
+  value: string
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
+  placeholder?: string
+  disabled?: boolean
+  small?: boolean
+  rows?: number
+  cols?: number
 }
 
 const defaultProps = {

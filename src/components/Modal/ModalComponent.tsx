@@ -1,13 +1,13 @@
 import React from 'react'
-import { getCustomizableComponentStyles } from '../../utils/styleUtils';
+import { getCustomizableComponentStyles } from '../../utils/styleUtils'
 import styles from './Modal.styles.css'
 
 export interface ModalComponentProps extends CustomizableComponentProps {
-  children: React.ReactNode;
-  onClose: () => void;
-  opened: boolean;
-  width?: number;
-  hideCloseButton?: boolean;
+  children: React.ReactNode
+  onClose: () => void
+  opened: boolean
+  width?: number
+  hideCloseButton?: boolean
 }
 
 const ModalComponent = (props: ModalComponentProps) => {

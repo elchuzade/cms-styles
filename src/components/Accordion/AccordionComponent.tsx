@@ -3,13 +3,13 @@ import { getCustomizableComponentStyles } from '../../utils/styleUtils';
 import styles from './Accordion.styles.css'
 
 interface AccordionItemProps {
-  title: React.ReactNode;
-  content: React.ReactNode;
+  title: React.ReactNode
+  content: React.ReactNode
 }
 
 export interface AccordionComponentProps extends CustomizableComponentProps {
-  children: Array<AccordionItemProps>;
-  width?: number;
+  children: Array<AccordionItemProps>
+  width?: number
 }
 
 const AccordionComponet = (props: AccordionComponentProps) => {

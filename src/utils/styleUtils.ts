@@ -1,16 +1,18 @@
-type CustomizableComponentStyleProps = {
-  marginLeft?: number;
-  marginRight?: number;
-  marginTop?: number;
-  marginBottom?: number;
-  paddingLeft?: number;
-  paddingRight?: number;
-  paddingTop?: number;
-  paddingBottom?: number;
+export type CustomizableComponentStyleProps = {
+  marginLeft?: number
+  marginRight?: number
+  marginTop?: number
+  marginBottom?: number
+  paddingLeft?: number
+  paddingRight?: number
+  paddingTop?: number
+  paddingBottom?: number
 }
 
-export const getCustomizableComponentStyles = (props: CustomizableComponentProps) => {
-  let style: CustomizableComponentStyleProps = {}
+export const getCustomizableComponentStyles = (
+  props: CustomizableComponentProps
+): CustomizableComponentStyleProps => {
+  const style: CustomizableComponentStyleProps = {}
   // Margin
   if (props.m || props.m === 0) {
     style.marginLeft = props.m

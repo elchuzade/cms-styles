@@ -1,15 +1,15 @@
 import React from 'react'
-import { getCustomizableComponentStyles } from '../../utils/styleUtils';
+import { getCustomizableComponentStyles } from '../../utils/styleUtils'
 import styles from './SelectInput.styles.css'
 
 export interface SelectInputComponentProps extends CustomizableComponentProps {
-  children: React.ReactNode;
-  name: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  placeholder?: string;
-  disabled?: boolean;
-  small?: boolean;
+  children: React.ReactNode
+  name: string
+  value: string
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void
+  placeholder?: string
+  disabled?: boolean
+  small?: boolean
 }
 
 const defaultProps = {

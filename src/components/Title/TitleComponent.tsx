@@ -1,10 +1,10 @@
 import React from 'react'
-import { getCustomizableComponentStyles } from '../../utils/styleUtils';
+import { getCustomizableComponentStyles } from '../../utils/styleUtils'
 import styles from './Title.styles.css'
 
 export interface TitleComponentProps extends CustomizableComponentProps {
-  children: React.ReactNode;
-  size?: 1 | 2 | 3;
+  children: React.ReactNode
+  size?: 1 | 2 | 3
 }
 
 const defaultProps = {
@@ -56,6 +56,6 @@ const TitleComponent = (props: TitleComponentProps) => {
   }
 }
 
-TitleComponent.defaultProps = defaultProps;
+TitleComponent.defaultProps = defaultProps
 
 export default TitleComponent

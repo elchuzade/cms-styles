@@ -1,14 +1,14 @@
 import React from 'react'
-import { getCustomizableComponentStyles } from '../../utils/styleUtils';
+import { getCustomizableComponentStyles } from '../../utils/styleUtils'
 import styles from './Image.styles.css'
 
 export interface ImageComponentProps extends CustomizableComponentProps {
-  src: string;
-  width?: number; // width in percentages in case the parent is flex
-  height?: number; // height in percentages
-  alignSelf?: string; // works in case the parent is flex
-  borderRound?: boolean;
-  borderRadius?: number;
+  src: string
+  width?: number // width in percentages in case the parent is flex
+  height?: number // height in percentages
+  alignSelf?: string // works in case the parent is flex
+  borderRound?: boolean
+  borderRadius?: number
 }
 
 const ImageComponent = (props: ImageComponentProps) => {

@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import { getCustomizableComponentStyles } from '../../utils/styleUtils';
+import { getCustomizableComponentStyles } from '../../utils/styleUtils'
 import styles from './Button.styles.css'
 
 export interface ButtonComponentProps extends CustomizableComponentProps {
-  children: React.ReactNode;
-  onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-  color?: 'blue' | 'green' | 'orange' | 'red' | 'purple' | 'dark' | 'light';
-  width?: number;
-  height?: number;
-  alignSelf?: string;
-  small?: boolean;
-  borderRound?: boolean;
+  children: React.ReactNode
+  onClick?: () => void
+  type?: 'button' | 'submit' | 'reset'
+  color?: 'blue' | 'green' | 'orange' | 'red' | 'purple' | 'dark' | 'light'
+  width?: number
+  height?: number
+  alignSelf?: string
+  small?: boolean
+  borderRound?: boolean
 }
 
 const defaultProps = {
@@ -45,6 +45,6 @@ const ButtonComponent = (props: ButtonComponentProps) => {
   )
 }
 
-ButtonComponent.defaultProps = defaultProps;
+ButtonComponent.defaultProps = defaultProps
 
 export default ButtonComponent

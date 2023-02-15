@@ -3,12 +3,12 @@ import styles from './TextInput.styles.css'
 import { getCustomizableComponentStyles } from '../../utils/styleUtils'
 
 export interface TextInputComponentProps extends CustomizableComponentProps {
-  name: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder?: string;
-  disabled?: boolean;
-  small?: boolean;
+  name: string
+  value: string
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  placeholder?: string
+  disabled?: boolean
+  small?: boolean
   type?: 'button' | 'checkbox' | 'color' | 'date' | 'datetime-local' | 'email' | 'file' | 'hidden' | 'image' | 'month' | 'number' | 'password' | 'radio' | 'range' | 'reset' | 'search' | 'submit' | 'tel' | 'text' | 'time' | 'url' | 'week',
 }
 

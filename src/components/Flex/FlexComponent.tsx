@@ -1,11 +1,11 @@
 import React from 'react'
-import { getCustomizableComponentStyles } from '../../utils/styleUtils';
+import { getCustomizableComponentStyles } from '../../utils/styleUtils'
 import styles from './Flex.styles.css'
 
 export interface FlexComponentProps extends CustomizableComponentProps {
-  children: React.ReactNode;
-  alignItems?: string; // to align children positions
-  justifyContent?: string; // to justify children positions
+  children: React.ReactNode
+  alignItems?: string // to align children positions
+  justifyContent?: string // to justify children positions
 }
 
 const FlexComponent = (props: FlexComponentProps) => {

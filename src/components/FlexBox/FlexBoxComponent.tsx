@@ -2,9 +2,9 @@ import React from 'react'
 import styles from './FlexBox.styles.css'
 
 export interface FlexBoxComponentProps {
-  children: React.ReactNode;
-  width?: number; // width in percentages in case the parent is flex
-  moveRight?: boolean;
+  children: React.ReactNode
+  width?: number // width in percentages in case the parent is flex
+  moveRight?: boolean
 }
 
 const FlexBoxComponent = (props: FlexBoxComponentProps) => {

@@ -1,12 +1,12 @@
 import React from 'react'
-import { getCustomizableComponentStyles } from '../../utils/styleUtils';
+import { getCustomizableComponentStyles } from '../../utils/styleUtils'
 import styles from './Card.styles.css'
 
 export interface CardComponentProps extends CustomizableComponentProps {
-  children: React.ReactNode;
-  width?: number; // This width is given in px
-  height?: number; // This width is given in px
-  cardHover?: boolean;
+  children: React.ReactNode
+  width?: number // This width is given in px
+  height?: number // This width is given in px
+  cardHover?: boolean
 }
 
 const CardComponent = (props: CardComponentProps) => {
