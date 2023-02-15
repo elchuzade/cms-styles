@@ -6,7 +6,7 @@ export interface ImageComponentProps extends CustomizableComponentProps {
   src: string
   width?: number // width in percentages in case the parent is flex
   height?: number // height in percentages
-  alignSelf?: string // works in case the parent is flex
+  alignSelf?: alignSelfProps // works in case the parent is flex
   borderRound?: boolean
   borderRadius?: number
 }

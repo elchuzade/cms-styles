@@ -9,7 +9,7 @@ export interface ButtonComponentProps extends CustomizableComponentProps {
   color?: 'blue' | 'green' | 'orange' | 'red' | 'purple' | 'dark' | 'light'
   width?: number
   height?: number
-  alignSelf?: string
+  alignSelf?: alignSelfProps // works in case the parent is flex
   small?: boolean
   borderRound?: boolean
 }
