@@ -7,6 +7,7 @@ export type CustomizableComponentStyleProps = {
   paddingRight?: number
   paddingTop?: number
   paddingBottom?: number
+  backgroundColor?: string
 }
 
 export const getCustomizableComponentStyles = (
@@ -50,6 +51,9 @@ export const getCustomizableComponentStyles = (
   }
   if (props.pb || props.pb === 0) {
     style.paddingBottom = props.pb
+  }
+  if (props.bgColor) {
+    style.backgroundColor = props.bgColor
   }
   return style
 }

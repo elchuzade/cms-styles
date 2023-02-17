@@ -4,13 +4,23 @@
 }
 
 .sidebar {
-  background: grey;
+  /* box-shadow: 3px 0 3px -3px rgba(0, 0, 0, 0.5); */
+  box-shadow: 0px -5px 8px -2px rgb(0 0 0 / 20%)
 }
 
 .content {}
 
 .sidebarButton {
-  position: absolute;
-  width: 64px;
-  height: 32px
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.sidebarButtonOpen {
+  padding: 4px 8px;
+}
+
+.sidebarButtonClose {
+  padding: 4px 8px;
 }

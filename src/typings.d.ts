@@ -46,4 +46,5 @@ interface CustomizableComponentProps extends ComponentProps {
   pr?: number // right padding in pixels
   pt?: number // top padding in pixels
   pb?: number // bottom padding in pixels
+  bgColor?: string; // background color hex, rgb, rgba
 }

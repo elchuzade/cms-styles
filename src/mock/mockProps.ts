@@ -25,7 +25,8 @@ export const customizableComponentPropsMock = {
   pl: 0,
   pr: 11,
   pt: 12,
-  pb: 13
+  pb: 13,
+  bgColor: '#000000'
 }
 
 /**
@@ -39,5 +40,6 @@ export const customizableComponentPropsMockReturn = {
   paddingLeft: `${customizableComponentPropsMock.pl}px`,
   paddingRight: `${customizableComponentPropsMock.pr}px`,
   paddingTop: `${customizableComponentPropsMock.pt}px`,
-  paddingBottom: `${customizableComponentPropsMock.pb}px`
+  paddingBottom: `${customizableComponentPropsMock.pb}px`,
+  backgroundColor: `${customizableComponentPropsMock.bgColor}`
 }

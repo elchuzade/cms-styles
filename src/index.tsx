@@ -88,13 +88,47 @@ export const PlayGround = ({ text }: Props) => {
   return (
     <div className={styles.body}>
       <SideBar
-        width={300}
-        side='right'
+        // side='right'
+        width={200}
         sidebar={
-          <Box>sdiebar</Box>
-        }
-        content={
           <Box>
+            <TextInput
+              small
+              ml={16}
+              mt={16}
+              mb={16}
+              name='test'
+              value={textInput}
+              placeholder='...search'
+              onChange={e => setTextInput(e.target.value)}
+            />
+            <Box pl={16}>
+              <Text mb={4}>Profile</Text>
+              <Text mb={4}>Network</Text>
+              <Text mb={4}>Products</Text>
+              <Text mb={4}>Settings</Text>
+            </Box>
+          </Box>
+        }
+        openButton={
+          <Box
+            pl={8} pr={8} pt={4} pb={4}
+            bgColor='#26BE52'
+            style={{
+              borderRadius: '8px'
+            }}
+          >Open it</Box>
+        }
+        closeButton={
+          <Box
+            pl={8} pr={8} pt={4} pb={4}
+            bgColor='#26BE52'
+            style={{
+              borderRadius: '8px'
+            }}
+          >Close it</Box>}
+        content={
+          <Box m={16}>
             <Flex>
               <FlexBox width={50}>
                 <Button m={8} onClick={() => { }}>default</Button>
