@@ -1,0 +1,16 @@
+.sidebarWrapper {
+  display: flex;
+  width: 100vw;
+}
+
+.sidebar {
+  background: grey;
+}
+
+.content {}
+
+.sidebarButton {
+  position: absolute;
+  width: 64px;
+  height: 32px
+}

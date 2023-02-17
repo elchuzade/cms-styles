@@ -23,7 +23,9 @@ const BoxComponent = (props: BoxComponentProps) => {
         ...props.style
       }}
       {...props.tagProps}
-    >{props.children}</div>
+    >
+      {props.children}
+    </div>
   )
 }
 

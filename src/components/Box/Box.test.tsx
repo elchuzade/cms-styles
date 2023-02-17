@@ -12,7 +12,7 @@ describe('Test Box component', () => {
     expect(getByTestId('boxChildComponent')).toBeInTheDocument()
   })
 
-  test('Check BoxComponentProps being passed and being used by the component', () => {
+  test('Check BoxComponentProps such as styles etc. being passed and being used by the component', () => {
     const boxComponentMockProps = {
       width: 400,
       height: 200,
@@ -27,7 +27,7 @@ describe('Test Box component', () => {
       >
         Box Component Children
       </BoxComponent>)
-    console.log(boxComponentMockProps)
+
     expect(getByTestId('boxComponent-testid')).toHaveClass(componentPropsMock.className)
     expect(getByTestId('boxComponent-testid')).toHaveStyle({
       width: '400px',
