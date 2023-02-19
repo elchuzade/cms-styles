@@ -17,7 +17,7 @@ Almost every component is customizable and easy to use. The dafault designs are 
 
 ## Usage
 
-First import the styles in App.tsx, this way they will accessible from all pages and components
+First import the styles in App.tsx, this way they will be accessible from all pages and components
 
 ```
 import 'cms-styles/dist/index.css'

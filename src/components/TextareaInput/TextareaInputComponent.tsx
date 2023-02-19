@@ -1,5 +1,6 @@
 import React from 'react'
 import { getCustomizableComponentStyles } from '../../utils/styleUtils'
+import { CustomizableComponentProps } from '../../utils/commonTypes';
 import styles from './TextareaInput.styles.css'
 
 export interface TextareaInputComponentProps extends CustomizableComponentProps {

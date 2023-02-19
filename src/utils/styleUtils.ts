@@ -1,3 +1,5 @@
+import { CustomizableComponentProps } from "./commonTypes"
+
 export type CustomizableComponentStyleProps = {
   marginLeft?: number
   marginRight?: number

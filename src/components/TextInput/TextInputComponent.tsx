@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './TextInput.styles.css'
 import { getCustomizableComponentStyles } from '../../utils/styleUtils'
+import { CustomizableComponentProps } from '../../utils/commonTypes';
 
 export interface TextInputComponentProps extends CustomizableComponentProps {
   name: string

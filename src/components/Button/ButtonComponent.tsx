@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getCustomizableComponentStyles } from '../../utils/styleUtils'
+import { CustomizableComponentProps, alignSelfProps } from '../../utils/commonTypes';
 import styles from './Button.styles.css'
 
 export interface ButtonComponentProps extends CustomizableComponentProps {

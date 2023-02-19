@@ -1,5 +1,6 @@
 import React from 'react'
 import { getCustomizableComponentStyles } from '../../utils/styleUtils'
+import { CustomizableComponentProps } from '../../utils/commonTypes';
 import styles from './Title.styles.css'
 
 export interface TitleComponentProps extends CustomizableComponentProps {

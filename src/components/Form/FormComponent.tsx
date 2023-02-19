@@ -1,5 +1,6 @@
 import React from 'react'
 import { getCustomizableComponentStyles } from '../../utils/styleUtils'
+import { CustomizableComponentProps, alignSelfProps } from '../../utils/commonTypes';
 import styles from './Form.styles.css'
 
 export interface FormComponentProps extends CustomizableComponentProps {

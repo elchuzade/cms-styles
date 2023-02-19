@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { getCustomizableComponentStyles } from '../../utils/styleUtils';
+import { CustomizableComponentProps } from '../../utils/commonTypes';
 import styles from './Accordion.styles.css'
 
 interface AccordionItemProps {

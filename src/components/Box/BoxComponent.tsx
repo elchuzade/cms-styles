@@ -1,5 +1,6 @@
 import React from 'react'
 import { getCustomizableComponentStyles } from '../../utils/styleUtils'
+import { CustomizableComponentProps, alignSelfProps } from '../../utils/commonTypes';
 import styles from './Box.styles.css'
 
 export interface BoxComponentProps extends CustomizableComponentProps {

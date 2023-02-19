@@ -1,5 +1,6 @@
 import React from 'react'
 import { getCustomizableComponentStyles } from '../../utils/styleUtils'
+import { CustomizableComponentProps } from '../../utils/commonTypes';
 import styles from './SelectInput.styles.css'
 
 export interface SelectInputComponentProps extends CustomizableComponentProps {
